@@ -207,7 +207,7 @@ then
 
 	# install dependencies of kernel sources ahead of time in case
 	# package.provided generated below causes them not to be (re)installed
-	PKGDIR=${PKGDIR} clst_myemergeopts="--quiet --update --newuse --onlydeps" run_merge "${clst_ksource}" || exit 1
+	PKGDIR=${PKGDIR} clst_myemergeopts="--update --newuse --onlydeps" run_merge "${clst_ksource}" || exit 1
 
 	# Create the kerncache directory if it doesn't exists
 	mkdir -p /tmp/kerncache/${clst_kname}
@@ -231,7 +231,7 @@ then
 
 	[ -L /usr/src/linux ] && rm -f /usr/src/linux
 
-	PKGDIR=${PKGDIR} clst_myemergeopts="--quiet --update --newuse" run_merge "${clst_ksource}" || exit 1
+	PKGDIR=${PKGDIR} clst_myemergeopts="--update --newuse" run_merge "${clst_ksource}" || exit 1
 
 	SOURCESDIR="/tmp/kerncache/${clst_kname}/sources"
 	if [ -L /usr/src/linux ]
