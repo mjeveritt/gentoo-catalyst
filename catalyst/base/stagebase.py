@@ -1125,6 +1125,9 @@ class StageBase(TargetBase, ClearBase, GenBase):
 					"before changing.\n")
 				myf.write('CHOST="' + self.settings["CHOST"] + '"\n')
 
+			if "CHOST_arm" in self.settings:
+				myf.write('CHOST_arm="' + self.settings["CHOST_arm"] + '"\n')
+
 			# Figure out what our USE vars are for building
 			myusevars = []
 			if "bindist" in self.settings["options"]:
