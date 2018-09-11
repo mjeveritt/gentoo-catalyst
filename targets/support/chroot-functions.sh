@@ -349,8 +349,8 @@ show_debug() {
 run_default_funcs() {
 	if [ "${RUN_DEFAULT_FUNCS}" != "no" ]
 	then
-		update_env_settings
 		setup_myfeatures
+		update_env_settings
 		show_debug
 	fi
 }
